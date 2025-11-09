@@ -1,65 +1,241 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url(../fonts/OverusedGroteskRoman-VF.ttf);
+    font-family: Overused-Grotesk;
+}
+
 body {
-    font-family: "Lexend";
-    font-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    --webkit-backdrop-filter: blur(16px) brightness(60%);
+    backdrop-filter: blur(16px) brightness(60%);
+    color: #eee;
+    font-family: Overused-Grotesk;
+    font-size: 1.1em;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
-body[data-theme="light"] {
-    background-color: #e6e6e6; 
-    /* background-color: #333;
-    color: #fff; */
+a {
+    transition: 0.2s;
+    color: #eee;
 }
 
-body[data-theme="dark"] {
-    background-color: #222;
-    color: white;
+a:hover {
+    opacity: 0.7;
 }
 
-body[data-theme="dark"] a {
-    color: white;
+/* HAMBURGER MENU BUTTON */
+#hamburgerMenuBtn {
+    display: none;
 }
 
-div#themeSwitcherSection {
-    text-align: right;
+/* MAIN CONTENT */
+main {
+    flex: 1;
 }
 
-div#mainHeader {
+/* NAVIGATION */
+nav {
+    border-bottom: 1px solid #eee;
+    background-color: rgba(34, 34, 34, 0.6);
+    --webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    overflow: hidden; /* used to make sure that the background of the whole navbar stays visible */
+    display: flex;
+    position: sticky;
+    top: 0px;
+    justify-content: space-around;
+}
+
+nav .mainNavLinks {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav .mainLogo a {
+    float: left;
+    display: inline;
+    font-size: 2em;
+    padding: 4px;
+    font-weight: 500;
+}
+
+nav a {
+    color: #eee;
+    font-size: 1.05em;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
     text-align: center;
-    font-weight: bold;
-    padding: 20px;
-    font-size: 10vw;
 }
 
-div#mainHeader[data-theme="light"] {
-    border: 8px solid black;
+nav li { float: left; /* used to get the list (<li>) elements in the navbar next to each other */ }
+
+/* HOMEPAGE "HERO" ELEMENT */
+#hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5.5em;
+    overflow: hidden;
 }
 
-div#mainHeader[data-theme="dark"] {
-    border: 8px solid white;
+#hero button:hover {
+    opacity: 0.7;
 }
 
-div.straightLine[data-theme="light"] {
-    /* border: 2px solid white; */
-    border: 4px solid black;
+.heroLineContainer {
+    text-align: center;
 }
 
-div.straightLine[data-theme="dark"] {
-    /* border: 2px solid white; */
-    border: 4px solid white;
+#heroLine1 { font-size: 5rem; }
+#heroLine2 { font-size: 2.5rem; }
+#heroLine3 { font-size: 2rem; }
+
+#heroBtnLinks { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
 }
 
-div.container {
-    width: 70%;
-    margin: 0 auto;
+#heroBtnLinks a {
+    margin: 3px 8px;
+    font-size: 2em;
+    background-color: #eee;
+    color: #222;
+    border-radius: 50%;
+    padding: 0.7em 0.8em;
+    text-decoration: none;
 }
 
-div.mainContent h1 {
-    font-size: 55px;
+#heroImg {
+    border-radius: 150px;
+    max-width: 70vw;
+    max-height: 70vh;
 }
 
-div.mainContent h2 {
-    font-size: 40px;
+/* SITE SECTIONS */
+.siteSection {
+    border-bottom: 1px solid #eee;
+    padding: 2em 4em;
+    font-size: 1.2em;
 }
 
-div.mainContent {
-    font-size: 22px;
+.siteSection h1 { font-family: 2em; }
+
+/* ABOUT ME */
+.aboutBoxContainer { 
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    flex-wrap: wrap;
+}
+
+.aboutBoxContainer .aboutBox {
+    text-align: center;
+    align-content: center;
+    margin: 10px;
+    background-color: rgba(34, 34, 34, 0.6);
+    padding: 1.2em;
+    border-radius: 25px;
+    /* width: 25vw; */
+    min-width: 300px;
+    min-height: 10vh;
+    overflow: hidden;
+}
+
+/* PROJECTS */
+.projectBox {
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.6);
+    border-radius: 25px;
+    padding: 1.10em;
+    margin-bottom: 1.1em;
+}
+
+.projectBox h2 {
+    margin: 0.2em 0;
+}
+
+.projectTagsContainer, .projectLinksContainer {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.projectTagsContainer .projectTagBox {
+    text-align: center;
+    min-width: 90px;
+    margin: 2px 5px;
+    font-size: 0.8em;
+    border-radius: 15px;
+    padding: 0.4em;
+    background-color: #eee;
+    color: #222;
+}
+
+.projectTagsContainer .projectTagBox a {
+    color: #222;
+    text-decoration: none;
+}
+
+.projectLinksContainer .projectLinkBox {
+    margin: 0 8px;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectLinksContainer .projectLinkBox a {
+    text-decoration: none;
+}
+
+.projectLinksContainer .projectLinkBox .icon {
+    font-size: 2em;
+}
+
+/* SKILLS */
+
+.skillBoxesContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.skillBoxesContainer .skillBox {
+    background-color: rgba(34, 34, 34, 0.6);
+    border-radius: 20px;
+    padding: 1.1em;
+    width: 25vw;
+    margin: 10px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.skillBoxesContainer .skillBox .icon {
+    font-size: 2em;
+    margin: 10px 0px;
+}
+
+.skillBox:hover {
+    opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin: 10px 0px;
 }

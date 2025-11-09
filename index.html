@@ -1,97 +1,234 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style/style.css" type="text/css">
-        <link rel="stylesheet" href="style/headerTextHover.css" type="text/css">
-        <style></style>
-        <title>Home - Emman Ruiz</title>
-    </head>
-    <body data-theme="light">
-        <div id="themeSwitcherSection">
-            Themes: 
-            <a href="#" onclick="changeToDark()">Dark</a> ||
-            <a href="#" onclick="changeToLight()">Light</a>
-        </div>
-
-        <br>
-
-        <div class="container">
-            <div class="header" id="mainHeader" data-theme="light">
-                <span class="headerE">E</span><span class="headerM1">m</span><span class="headerM2">m</span><span class="headerA">a</span><span class="headerN">n</span>
-                <span class="headerR">R</span><span class="headerU">u</span><span class="headerI">i</span><span class="headerZ">z</span>
-            </div>
-
-            <br>
-
-            <div class="straightLine" data-theme="light"></div>
-
-            <div class="mainContent">
-                <h1>Hello World!!!</h1>
-                <p>
-                Hello visitor, and welcome to my website!<br>
-                I am a first-year student at Queen Mary University of London (QMUL), taking a course in Computer Systems Engineering.<br>
-                I like electronics, programming and learning new things about computers, software and technology.<br>
-                I made this website for people who want to check out my personal projects on GitHub and what I do, among other things.
-                </p>
-
-                <h2>Programming languages and tools</h2>
-                <p>I normally work with these languages:</p>
-                <ul>
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>PHP</li>
-                    <li>JavaScript</li>
-                    <li>SQL</li>
-                </ul>
-                <p>I also use these tools to help me write and test my code:</p>
-                <ul>
-                    <li><a href="https://code.visualstudio.com/"">Visual Studio Code</a> - I use almost 100% of the time</li>
-                    <li><a href="https://jupyter.org/">JupyterLab</a> - For writing programs and documentation</li>
-                    <li><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> - For large scale projects I feel like making</li>
-                    <li><a href="https://www.jetbrains.com/rider/">JetBrains Rider</a> - When learning .NET and C#</li>
-                    <li><a href="https://www.apachefriends.org/">XAMPP</a> - For managing MySQL databases and testing PHP code</li>
-                </ul>
-                <p>However, I'm open to trying other languages and tools that pique my interest. If you have any recommendations, drop me an email or a LinkedIn message below.</p>
-                
-                <br>
-                <div class="straightLine" data-theme="light"></div>
-
-                <h1>Projects</h1>
-                <h2>NoteThemAll - A revision app [A-level]</h2>
-                <p>A web app that I wrote for my A-level Computer Science programming project using MySQL, Vanilla PHP and JavaScript. Allows users to create and manage revision notes digitally, and it also includes a login and registration system. 
-                    Also features a file upload system to attach videos, audio and images to notes, as well as an interactive quiz system to help users test themselves on a topic they are studying with existing notes.</p>
-                <p>This is the first full app that I made that features a Graphical User Interface (GUI) and server-side code. A remastered version of this app is planned.</p>
-                <ul>
-                    <li><a href="notethemall.html">Screenshots</a></li>
-                </ul>
-                <h2>Student management system [CS50P]</h2>
-                <p>A program written entirely in Python and with a database called SQLite, as part of the final project for CS50's Introduction to Programming With Python (CS50P) course. 
-                    Updated it so it's organised into separate files and it has more functionality.</p>
-                <ul>
-                    <li><a href="https://github.com/emman123667/student-manager-system-python-cs50p/">Source code + Readme</a></li>
-                </ul>
-
-                <br>
-                <div class="straightLine" data-theme="light"></div>
-
-                <h1>Other pages</h1>
-                <p>You can check out my other pages by following the links below:</p>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/emman-ruiz-medina-09a786320/">LinkedIn</a></li>
-                    <li><a href="https://github.com/emman123667/">GitHub</a></li>
-                    <li><a href="files/Emman Ruiz Medina CV.pdf">CV/Resumé</a></li>
-                    <li><a href="mailto:medinaemmanruiz@gmail.com">Email me</a></li>
-                </ul>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+    <link rel="stylesheet" href="style/mediaqueries.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" type='text/css' />
+    <title>Emman Ruiz Medina</title>
+    <script src="scripts/main.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="mainLogo"><a href="#">Emman Ruiz</a></div>
+        <ul class="mainNavLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#aboutme">About me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#">CV</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="siteSection" id="hero">
+            <img src="images/1759128630362.jpg" id="heroImg">
+            <div class="heroLineContainer">
+                <div id="heroLine1">Welcome!</div>
+                <div id="heroLine2">I'm <strong>Emman Ruiz Medina</strong></div>
+                <div id="heroLine3">Aspiring software engineer</div>
+                <div id="heroBtnLinks">
+                    <a href="https://www.linkedin.com/in/emman-ruiz-medina-09a786320/" class="icon fa fa-linkedin"></a>
+                    <a href="https://github.com/mantot-123" class="icon fa fa-github"></a>
+                    <a href="mailto:medinaemmanruiz@gmail.com" class="icon fa fa-envelope"></a>
+                    <a href="#" class="icon fa fa-file-text"></a>
+                </div>
             </div>
         </div>
-        <script type="text/javascript">
-            
-        </script>
-        <script src="scripts/main.js" type="text/javascript"></script>
-    </body>
+        <div class="siteSection" id="aboutme">
+            <h1>About me</h1>
+            <p>A couple of things to know about me...</p>
+            <div class="aboutBoxContainer">
+                <div class="aboutBox">
+                    Aspiring software and UI/UX engineer
+                </div>
+                <div class="aboutBox">
+                    2nd Year Computer Systems Engineering student at Queen Mary University of London
+                </div>
+                <div class="aboutBox">
+                    Worked as a software engineer at Hyperlink
+                </div>
+                <div class="aboutBox">
+                    Worked on a variety of software-based projects
+                </div>
+                <div class="aboutBox">
+                    Experienced in different tools, programming languages, technologies and frameworks
+                </div>
+                <div class="aboutBox">
+                    Hates onions so much 🧅🧅🧅
+                </div>
+            </div>
+        </div>
+        <div class="siteSection" id="projects">
+            <h1>Projects</h1>
+            <p>Here are some projects I have worked on during and outside my studies:</p>
+            <div class="projectBox">
+                <h2>Portfolio website</h2>
+                <div class="projectTagsContainer">
+                    <div class="projectTagBox">Web</div>
+                    <div class="projectTagBox">HTML</div>
+                    <div class="projectTagBox">CSS</div>
+                    <div class="projectTagBox">JavaScript</div>
+                </div>
+                <p>The website you are currently seeing now.</p>
+                <div class="projectLinksContainer">
+                    <div class="projectLinkBox">
+                        <a href="#" class="icon fa fa-github"></a>
+                        Source code
+                    </div>
+                </div>
+            </div>
+            <div class="projectBox">
+                <h2>Fitdex - Fitness Tracker Mobile App</h2>
+                <div class="projectTagsContainer">
+                    <div class="projectTagBox">Mobile</div>
+                    <div class="projectTagBox">Dart</div>
+                    <div class="projectTagBox">Flutter</div>
+                    <div class="projectTagBox">Firebase</div>
+                </div>
+                <p>A mobile app written for managing workout routines and browsing a catalogue of exercises to view, save and add to routines. Written in Flutter and backend managed with Firebase.</p>
+                <div class="projectLinksContainer">
+                    <div class="projectLinkBox">
+                        <a href="https://github.com/mantot-123/gym_workout_finder_tracker_app_flutter" class="icon fa fa-github"></a>
+                        Source code
+                    </div>
+                </div>
+            </div>
+            <div class="projectBox">
+                <h2>Ping Pong</h2>
+                <div class="projectTagsContainer">
+                    <div class="projectTagBox">Games</div>
+                    <div class="projectTagBox">Godot</div>
+                    <div class="projectTagBox">GDScript</div>
+                </div>
+                <p>A basic ping pong game written in Godot as part of the 20 Games Challenge. Built using the Godot game engine and GDScript.</p>
+                <div class="projectLinksContainer">
+                    <div class="projectLinkBox">
+                        <a href="https://github.com/mantot-123/pingponggamegodot" class="icon fa fa-github"></a>
+                        Source code
+                    </div>
+                    <div class="projectLinkBox">
+                        <a href="https://20_games_challenge.gitlab.io/" class="icon fa fa-gamepad"></a>
+                        20 Games Challenge link
+                    </div>
+                </div>
+            </div>
+            <div class="projectBox">
+                <h2>Jetpack Joyride Clone</h2>
+                <div class="projectTagsContainer">
+                    <div class="projectTagBox">Games</div>
+                    <div class="projectTagBox">Godot</div>
+                    <div class="projectTagBox">GDScript</div>
+                </div>
+                <p>A version of the popular game Jetpack Joyride (originally made by Halfbrick Studios) written in Godot as part of the 20 Games Challenge.</p>
+                <div class="projectLinksContainer">
+                    <div class="projectLinkBox">
+                        <a href="https://github.com/mantot-123/jetpackclone/" class="icon fa fa-github"></a>
+                        Source code
+                    </div>
+                    <div class="projectLinkBox">
+                        <a href="https://20_games_challenge.gitlab.io/" class="icon fa fa-gamepad"></a>
+                        20 Games Challenge link
+                    </div>
+                </div>
+            </div>
+            <div class="projectBox">
+                <h2>Horse Race Simulator</h2>
+                <div class="projectTagsContainer">
+                    <div class="projectTagBox">Desktop</div>
+                    <div class="projectTagBox">Java</div>
+                    <div class="projectTagBox">Swing</div>
+                </div>
+                <p>A GUI horse race simulator program written in Java with the Swing framework as part of the final project for the module ECS414U - Object Oriented Programming. </p>
+                <div class="projectLinksContainer">
+                    <div class="projectLinkBox">
+                        <a href="https://github.com/emman123667/HorseRaceSimulator" class="icon fa fa-github"></a>
+                        Source code
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="siteSection" id="skills">
+            <h1>Skills</h1>
+            <div class="skillBoxesContainer">
+                <div class="skillBox">
+                    <a class="icon devicon-python-plain"></a>
+                    Python
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-java-plain"></a>
+                    Java
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-html5-plain"></a>
+                    HTML
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-css3-plain"></a>
+                    CSS
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-javascript-plain"></a>
+                    JavaScript
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-typescript-plain"></a>
+                    TypeScript
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-nodejs-plain-wordmark"></a>
+                    Node.js
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-react-plain"></a>
+                    React.js
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-nextjs-plain"></a>
+                    Next.js
+                </div>
+                <div class="skillBox">
+                    <a class="icon fa fa-database"></a>
+                    SQL
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-php-plain"></a>
+                    PHP
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-flutter-plain"></a>
+                    Flutter
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-dart-plain"></a>
+                    Dart
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-firebase-plain"></a>
+                    Firebase
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-supabase-plain"></a>
+                    Supabase
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-godot-plain"></a>
+                    Godot
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-godot-plain"></a>
+                    GDScript
+                </div>
+                <div class="skillBox">
+                    <a class="icon devicon-git-plain"></a>
+                    Git
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>Copyright &copy; 2025 - present Emman Ruiz Cunanan Medina.</div>
+    </footer>
+</body>
 </html>
