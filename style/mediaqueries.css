@@ -2,4 +2,15 @@
     nav .mainNavLinks {
         display: none;
     }
+
+    #hero {
+        padding: 2rem 1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #heroLineContainer {
+        font-size: 0.7em;
+    }
 }
