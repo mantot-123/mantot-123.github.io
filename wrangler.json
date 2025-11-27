@@ -6,7 +6,7 @@
   "workers_dev": false,
   "routes": [
     {
-      "pattern": "emman-medina.co.uk/",
+      "pattern": "emman-medina.co.uk/*",
       "zone_id": "34a09285ed3a6f82a1e5332671d86247"
     }
   ],
