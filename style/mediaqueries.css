@@ -4,6 +4,7 @@
     }
 
     #hero {
+        font-size: 1em;
         padding: 2rem 1rem;
         justify-content: center;
         align-items: center;
@@ -12,5 +13,9 @@
 
     #heroLineContainer {
         font-size: 0.7em;
+    }
+
+    .siteSection {
+        padding: 0.7em 2.3em;
     }
 }
